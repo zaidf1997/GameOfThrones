@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>
+FORM
+</title>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function()
+{
+$('#submit').click(function()
+{
+var f = $('#xyz').val();
+var c = $('#number').val();
+var mail = $('#mail').val();
+//var gen = $('#gdr').val();
+var pass = $('#pas').val();
+var pass2 = $('#cpas').val();
+
+var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+
+if (f.length == 0)
+{
+$('#a').text("* All fields are mandatory*");
+$('#xyz').focus();
+return false;
+}
+
+if(c.length ==0)
+{
+$('#b').text("*Enter a valid contact number*");
+$('#number').focus();
+return false;
+}
+
+if(!mail.match(email_regex) || mail.length ==0)
+{
+$('#p1').text("*Enter a valid email id*");
+$('#mail').focus();
+return false;
+}
+
+if(pass.length==0){
+$('#de').text("*Enter password*");
+$('#pas').focus();
+return false;
+}
+if(pass!=pass2)
+{
+$('#de').text("*Passwords don't match*");
+$('#cpas').focus();
+return false;
+}
+
+
+
+});
+});
+</script>
+
+
+
+</head>
+<body>
+<h1 align="center"> Become a mamber of The GOT World!!</h1>
+<p text-align="center" size="50px"> <a href="home.html"> Home Page</a></p>
+<form style="float: margin-top: 2%; text-align:center;">
+
+<p id ="a"></p>
+USER-NAME<br>
+<input type="text" id="xyz" name="firstname"><br><br>
+<p id="b"></p>
+CONTACT NO<br>
+<input type="text" name="num" id="number"></span><br><br>
+<p id="p1"></p>
+EMAIL-ID<br>
+<input type="text" name="email" id="mail"><br><br>
+<p id="de"></p>
+PASSWORD<br>
+<input type="password" name="password" id="pas"><br><br>
+RE-ENTER PASSWORD<br>
+<input type="password" name="password2" id="cpas"><br><br>
+
+<p id ="p2"></p>
+Gender<br>
+<select id="gdr">
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+<br><br><br><br>
+
+QUERY<br>
+<input type="text" name="query"><br><br><br><br>
+
+<button id="submit">Submit</button>
+
+<input type="reset" name="Submit">
+</p>
+</form>
+</form>
+</body>
+<style>
+ 
+ body{
+ background-image: url(faces.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+</style>
+</html>

@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>
+FORM
+</title>
+<script>
+
+function myForm()
+{
+var x = document.getElementById("xyz");
+if (x.value =="")
+{
+window.alert("Please fill your name");
+return false;
+}
+
+var n = document.getElementById("number").value;
+if (isNaN(n)==true)
+{
+window.alert("Enter Numeric value only for the contact number field");
+return false;
+}
+
+
+var m = document.getElementById("mail").value;
+var atposition=m.indexOf("@"); 
+var dotposition=m.lastIndexOf(".");
+ if(m=="")
+{
+alert("Enter a valid email address");
+return false;
+} 
+
+if(atposition<1 || dotposition<atposition+2 || dotposition+2>=m.length)
+{ 
+ window.alert("Please enter a valid e-mail address");
+ return false;
+}
+
+
+var a = document.getElementById("cpas");
+var z = document.getElementById("pas");
+if (z.value =="")
+{
+window.alert("Please fill in your password.");
+return false;
+}
+if (a.value!=z.value)
+{
+window.alert("The Passwords do not match");
+return false;
+}
+if ((z.value.length < 4) || (z.value.length > 8))
+{
+alert("Your Password must be 4 to 8 Alphanumerical Character");
+return false;
+}
+
+
+
+var t = confirm("Are you sure?");
+			if(t == true){
+				var t = document.getElementById("01");
+				t.href = "abc.html";
+				return false;
+			}
+}
+
+
+</script>
+
+
+
+</head>
+<body>
+<h1 align="center"> Become a mamber of The GOT World!!</h1>
+<p text-align="center" size="50px"> <a href="home.html"> Home Page</a></p>
+<form method="post" style="float: margin-top: 2%; text-align:center; action:abc.htmlS";>
+USER-NAME<br>
+<input type="text" id="xyz" name="firstname"><br><br>
+CONTACT NO<br>
+<input type="text" name="num" id="number"></span><br><br>
+EMAIL-ID<br>
+<input type="text" name="email" id="mail"><br><br>
+PASSWORD<br>
+<input type="password" name="password" id="pas"><br><br>
+RE-ENTER PASSWORD<br>
+<input type="password" name="password2" id="cpas"><br><br>
+
+
+GENDER<br>
+<input type="radio" name="gender" value="male" id="c">
+MALE <br>
+<input type="radio" name="gender" value="female" id="c">
+FEMALE<br>
+<input type="radio" name="gender" value="other" id="c">
+OTHER <br><br><br>
+
+QUERY<br>
+<input type="text" name="query"><br><br><br><br>
+
+<button id="mno"><a id="01" onclick="myForm()">Login</a></button>
+
+<input type="reset" name="Submit">
+</p>
+</form>
+</form>
+</body>
+<style>
+ 
+ body{
+ background-image: url(faces.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+position: fixed;
+}
+</style>
+</html>
