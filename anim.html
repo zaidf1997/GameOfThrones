@@ -1,0 +1,97 @@
+<html>
+<head>
+<title> exp3</title>
+<style>
+
+div {
+
+width: 100px;
+
+height: 50px;
+
+background-color: red;
+
+font-weight: bold;
+
+position: relative;
+
+
+
+animation: mymove 5s infinite;
+
+}
+
+#div1 {animation-timing- function: linear;}
+
+#div2 {animation-timing- function: ease;}
+
+#div3 {animation-timing- function: ease-in;}
+
+#div4 {animation-timing- function: ease-out;}
+
+#div5 {animation-timing- function: ease-in- out;}
+
+@keyframes mymove {
+
+from {left: 0px;}
+
+to {left: 300px;}
+
+}
+p.serif{
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* unvisited link */
+a:link {
+    color: green;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+/* selected link */
+a:active {
+    color: yellow;
+}
+
+
+#d {
+
+background-color: skyblue;
+
+width: 300px;
+
+border: 25px solid green;
+
+padding: 25px;
+
+margin: 25px;
+
+} 
+</style>
+</head>
+<body>
+<h3> Example of animation in css</h3>
+<div></div>
+<h1>CSS font-family</h1>
+<p class="serif">This is a paragraph, shown in the Times New Roman font.</p>
+<p class="sansserif">This is a paragraph, shown in the Arial font.</p>
+
+<p>Mouse over and click the link: <a href="https://www.google.com">puppies.com</a></p>
+
+<p id="d"> Random textRandom textRandom textRandom textRandom textRandom textRandom textRandom textRandom text</p>
+
+</body>
+</html>
