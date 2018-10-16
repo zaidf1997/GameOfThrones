@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: 
+
+Sitemap: https://zaidf1997.github.io/GameOfThrones/sitemap.xml
